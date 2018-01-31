@@ -1,0 +1,2 @@
+apes-compose
+SIMULATION_N_CPUS=2 ../SystemPlatform/simulation.x SimpleApplication

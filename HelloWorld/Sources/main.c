@@ -1,0 +1,67 @@
+#include <Platform/Platform.h>
+#include "../Headers/Private/XPuts.h"
+#include "../Headers/Private/Itoa.h"
+#include <Processor/Processor.h>
+
+void system_kickstart (void)
+{
+	/*volatile uint32_t guard=0;
+	volatile int go_hello = 1;
+	volatile int go_world = 0;
+	char buffer[4];
+	if (cpu_mp_id() == 0){
+		while (go_hello){
+			itoa(guard,buffer);
+			xputs(buffer);
+      //xputs ("hello, ");
+			guard++;
+			if(guard>100){
+				go_hello=0;
+				go_world=1;}}}
+	else if (cpu_mp_id() == 1){
+		xputs("ok");
+		while (go_world){
+				guard++;
+        xputs ("world!");
+				if(guard>200){
+					go_world=0;}}}
+	for(;;);*/
+
+	/*while (go_hello){
+		guard++;
+		if (cpu_mp_id() == 0){
+			if (go_hello){
+				xputs ("hello, ");
+				if(guard>10){
+					go_hello=0;
+					go_world=1;}}}
+		if (cpu_mp_id() == 1){
+			if (go_world){
+				xputs ("world!");
+				if(guard>110){
+					go_world=0;}}
+			else{
+				if(guard >100 && guard <110){
+					go_world=1;}}}}
+	for(;;);*/
+
+	if(cpu_mp_id()==0){
+		xputs("hello, ");
+		cpu_mp_proceed();
+		cpu_trap_enable(0);}
+	else if(cpu_mp_id()==1){
+		cpu_mp_wait();
+		cpu_trap_enable(0);
+		xputs("world!");}
+
+for(;;);}
+
+  /*platform_debug_puts ("Hello World !\r\n");
+  xputs("slt");
+  char buffer[4];
+  int a=123;
+  int r;
+  r=itoa(a,buffer);
+  xputs(buffer);
+  for (;;);*/
+
