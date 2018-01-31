@@ -1,0 +1,217 @@
+[20hCreate dispatcher thread.
+Create decoder thread 0.
+Create decoder thread 1.
+Create decoder thread 2.
+Create decoder thread 3.
+Create decoder thread 4.
+Create decoder thread 5.
+Create decoder thread 6.
+[dispatcher] Found SOI
+Create decoder thread 7.
+Create serializer thread.
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 172636840 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 37502620 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 37672620 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 38366900 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 38834900 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 39905950 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 36460160 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 38032080 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 37406890 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[serializer] 1 frame in 38498860 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
