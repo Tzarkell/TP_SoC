@@ -1,0 +1,22 @@
+#include <../Private/Framebuffer.h>
+#include <DnaTools/DnaTools.h>
+#include <Processor/Processor.h>
+
+status_t soclib_fb_open (char * name, int32_t mode, void ** data)
+{
+  watch (status_t)
+  {
+    ensure (data != NULL, DNA_ERROR);
+    *data = (void *) & FB[0];
+    return DNA_OK;
+  }
+}
+
+status_t soclib_fb_write (void * handler, void * source, int64_t offset, int32_t * p_count) {
+    soclib_framebuffer_t * fb = (soclib_framebuffer_t *) handler;
+
+    for (uint32_t i = 0; i < * p_count; i++) {
+        cpu_write (UINT8, (& fb -> port -> write), ((char *)source)[i]);
+    }
+  return DNA_OK;
+}

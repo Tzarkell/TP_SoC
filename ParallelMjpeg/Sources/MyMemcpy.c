@@ -1,0 +1,39 @@
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+//#include "../Headers/Private/dma.h"
+#include "/softslin/TPSoC3A/Simulation/SoCLib/soclib/soclib/module/infrastructure_component/dma_infrastructure/vci_dma/include/soclib/dma.h"
+#include "../Headers/Private/MyMemcpy.h"
+#include <Processor/Processor.h>
+
+void * mymemcpy(void *dst, const void *src, const size_t len){
+    //printf("dest : %u \n", (uint32_t)dst);
+    uint32_t * dma_regs;
+    dma_regs=(uint32_t*)0xC7000000;
+    dma_regs[DMA_DST] = (uint32_t)dst;
+    printf("dest : %u \n", dma_regs[DMA_DST]);
+    dma_regs[DMA_SRC] = (uint32_t)src;
+    printf("src : %u \n", dma_regs[DMA_SRC]);
+    dma_regs[DMA_LEN] = len;
+    //printf("len : %d \n", dma_regs[DMA_LEN]);
+    /*printf("dest : %u \n", dma_regs[DMA_DST]);
+    printf("src : %u \n", dma_regs[DMA_SRC]);
+    printf("len : %d \n", dma_regs[DMA_LEN]);*/
+
+    //bigtime_t tmr;
+    //tmr=0;
+    //cpu_timer_cancel(0);
+    //cpu_timer_set(0,tmr);
+    //cpu_write_UINT8 (DMA_DST, *dst);
+    //cpu_write_UINT8 (DMA_SRC, *src);
+    //cpu_write_UINT8 (DMA_LEN, len);
+    //soclib_io_set(dma, DMA_DST, dst);
+    //soclib_io_set(dma, DMA_SRC, src);
+    //soclib_io_set(dma, DMA_LEN, len);
+    while (dma_regs[DMA_LEN]);
+    //cpu_timer_get(0,&tmr);
+    //itoa(tmr,buffer);
+    //xputs(buffer);
+    //while (soclib_io_get(dma, DMA_LEN));
+    return dst;}

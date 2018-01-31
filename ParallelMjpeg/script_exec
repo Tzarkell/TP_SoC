@@ -1,0 +1,1 @@
+SIMULATION_N_CPUS=5 ../SystemPlatform/simulation.x MJPEG

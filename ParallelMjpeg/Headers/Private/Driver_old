@@ -1,0 +1,8 @@
+#include "DnaTools/Status.h"
+
+status_t * soclib_fb_open(char * name, int32_t mode, void ** cookie);
+status_t * soclib_fb_close(void * cookie);
+status_t * soclib_fb_free(void * cookie);
+status_t * soclib_fb_read(void * handler, void * destination, int64_t offset, int32_t * p_res);
+status_t * soclib_fb_write(void * handler, void * source, int64_t offset, int32_t * p_res);
+status_t * soclib_fb_control(void * handler, int32_t operation, va_list arguments, int32_t * p_res);

@@ -1,0 +1,212 @@
+[20hCreate dispatcher thread.
+Create decoder thread 0.
+Create decoder thread 1.
+Create decoder thread 2.
+Create decoder thread 3.
+Create decoder thread 4.
+Create serializer thread.
+[dispatcher] Found SOI
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+kpn_channel_write_dma serializer...[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[serializer] 1 frame in 250101140 ns
+kpn_channel_write_dma serializer...[serializer] 1 frame in 13200600 ns
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found SOI
+kpn_channel_write_dma serializer...[serializer] 1 frame in 43392970 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+kpn_channel_write_dma serializer...[serializer] 1 frame in 13220070 ns
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found SOI
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+kpn_channel_write_dma serializer...[serializer] 1 frame in 92941830 ns
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+kpn_channel_write_dma serializer...[serializer] 1 frame in 13283820 ns
+kpn_channel_write_dma serializer...[serializer] 1 frame in 13159660 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+kpn_channel_write_dma serializer...[serializer] 1 frame in 67942970 ns
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[dispatcher] Found SOI
+kpn_channel_write_dma serializer...[serializer] 1 frame in 13209410 ns
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack
+[dispatcher] Found EOI
+[dispatcher] Flushing data to the decoder
+[decoder] SOI marker found
+[decoder] APP0 marker found
+[decoder] DQT marker found
+[decoder] DQT marker found
+[decoder] SOF0 marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] DHT marker found
+[decoder] SOS marker found
+[decoder] 576 MCU to unpack

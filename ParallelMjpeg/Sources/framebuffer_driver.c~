@@ -1,0 +1,183 @@
+#include "../Headers/Private/Framebuffer.h"
+#include <Core/Core.h>
+#include <MemoryManager/MemoryManager.h>
+#include <Processor/Processor.h>
+#include <DnaTools/DnaTools.h>
+//#include <Private/framebuffer_driver.h>
+#include <Platform/Platform.h>
+
+//==================================================
+// Shared variables declarations
+//==================================================
+
+// Structure containing the parameters of ONE instance of a FB peripheral
+// This structure takes its values from the ldscript
+typedef struct my_framebuffer_config {
+  uint32_t width;
+  uint32_t height;
+  uint8_t *buffer;  // the address of the peripheral
+} my_framebuffer_config_t;
+
+
+// Structure asociating a FB config with its file in the filesystem
+// This structure can have other fields, used internally by the driver.
+typedef struct my_framebuffer {
+  char name[DNA_NAME_LENGTH];  // Name of the file in the filesystem
+  my_framebuffer_config_t config;
+} my_framebuffer_t;
+
+// Variables declared in the ldscript
+extern uint32_t SOCLIB_FB_NDEV;
+extern my_framebuffer_config_t SOCLIB_FB_DEVICES[];
+
+status_t my_fb_init_hardware (void);
+status_t my_fb_init_driver (void);
+void my_fb_uninit_driver (void);
+const char **my_fb_publish_devices (void);
+device_cmd_t *my_fb_find_device (const char * name);
+
+status_t my_fb_open (char *name, int32_t mode, void ** data);
+status_t my_fb_close (void *data);
+status_t my_fb_free (void *data);
+
+status_t my_fb_read (void *handler, void *destination, int64_t offset, int32_t *p_count);
+status_t my_fb_write (void *handler, void *source, int64_t offset, int32_t *p_count);
+status_t my_fb_control (void *handler, int32_t operation, va_list arguments, int32_t *p_res);
+
+my_framebuffer_t *FB = NULL;  // The data structures used only by the driver : all the data needed to handle the peripherals.
+char **my_fb_devices = NULL;  // list of names of files in the filesystem, in /devices/
+
+// Structure containing the functions to handle the files (in the filesystem) associated to the FBs
+device_cmd_t my_fb_commands = {
+  my_fb_open,
+  my_fb_close,
+  my_fb_free,
+  my_fb_read,
+  my_fb_write,
+  my_fb_control
+};
+
+// Structure containing the functions that will be used by the US to control this driver.
+driver_t my_fb_module = {
+  "my_fb",
+  my_fb_init_hardware,
+  my_fb_init_driver,
+  my_fb_uninit_driver,
+  my_fb_publish_devices,
+  my_fb_find_device
+};
+
+
+
+//==================================================
+// Implementation
+//==================================================
+
+
+
+
+
+// Initialization of the devices. Nothing to do for the FBs.
+/*status_t my_fb_init_hardware (void) {
+  return DNA_OK;
+}*/
+
+
+
+
+
+
+// Th driver initializes all its data structures.
+status_t my_fb_init_driver (void) {
+  char alpha_index[8];
+  platform_debug_puts ("Init Driver ");
+
+  // Create the device names array.
+  my_fb_devices = kernel_malloc (sizeof (char *) *SOCLIB_FB_NDEV + 1, true);
+  FB = kernel_malloc (sizeof (my_framebuffer_t) * SOCLIB_FB_NDEV, true);
+  if (FB == NULL) return DNA_OUT_OF_MEM;
+
+  // Create the FB structures and names
+  for (int32_t i = 0; i < SOCLIB_FB_NDEV; i += 1) {
+    // Create the name of the FB file
+    dna_itoa (i, alpha_index);
+    dna_strcpy (FB[i] . name, "video/simulator/");
+    dna_strcat (FB[i] . name, alpha_index);
+    my_fb_devices[i] = FB[i] . name;
+    // Set the configuration of the FB
+    FB[i] . config = SOCLIB_FB_DEVICES[i];
+  }
+
+  return DNA_OK;
+}
+
+// Return the list of filenames to the OS. THese files will be created in /devices/
+const char ** my_fb_publish_devices (void) {
+  return (const char **) my_fb_devices;
+}
+
+// Return the functions that will handle the FB files, in the filesystem.
+device_cmd_t * my_fb_find_device (const char * name) {
+  return & my_fb_commands;
+}
+
+// It's not important if nothing is freed :P
+void  my_fb_uninit_driver (void) {
+}
+
+
+
+// Functions Open, Close, Free
+
+status_t my_fb_open (char * name, int32_t mode, void ** data) {
+ platform_debug_puts ("Open Driver ");
+ watch (status_t)
+  {
+    ensure (data != NULL, DNA_ERROR);
+      *data = (void *) & FB[0];
+      return DNA_OK;
+  }
+
+
+}
+
+
+status_t my_fb_close (void * data) {
+  return DNA_OK;
+}
+
+
+status_t my_fb_free (void * data) {
+  return DNA_OK;
+}
+
+
+
+// Functions Read,Write, Control
+
+status_t my_fb_read (void * handler, void * destination, int64_t offset, int32_t * p_count) {
+  // Nobody will read from the FB, so do nothing
+  return DNA_OK;
+}
+
+
+status_t my_fb_write (void * handler, void * source, int64_t offset, int32_t * p_count) {
+  my_framebuffer_t * fb = handler;
+  for (uint32_t i = 0; i < (* p_count)-offset; i++) cpu_write (UINT8, (& (fb -> config.buffer[i+offset])), ((char *)source)[i+offset]);
+  // Autorewind
+  
+
+  // only for debug
+  log (VERBOSE_LEVEL, "FB: %d bytes @ 0x%x offset to 0x%x", *p_count, (int32_t)offset, destination); 
+
+  return DNA_OK;
+}
+
+
+status_t my_fb_control (void * handler, int32_t function, va_list arguments, int32_t * p_ret) {
+	// No control is needed for the FB device, no do nothing
+  return DNA_ERROR;
+}
+
+
+
